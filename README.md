@@ -27,8 +27,9 @@ A modern, high-performance weather telemetry dashboard built with React, Vite, a
 
 1. **Clone the repository:**
    
-  ``` 
-git clone [[https://github.com/charuljain02/WEATHER-FORECASTING](https://github.com/charuljain02/WEATHER-FORECASTING.git)
+
+git clone [https://github.com/charuljain02/WEATHER-FORECASTING](https://github.com/charuljain02/WEATHER-FORECASTING.git)
+```
 cd weather-forecasting
 npm install
 
