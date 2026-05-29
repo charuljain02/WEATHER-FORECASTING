@@ -1,7 +1,3 @@
-# 🌤️ Hyper-Fidelity Weather Forecasting Dashboard
-
-A modern, high-performance weather telemetry dashboard built with React, Vite, and Tailwind CSS v4. This application features live, debounced global autocomplete search indexing, client-side memory caching, dynamic geolocation tracking, and interactive microclimate metrics mapping using Recharts.
-
 
 # 🌤️ Hyper-Fidelity Weather Forecasting Dashboard
 
