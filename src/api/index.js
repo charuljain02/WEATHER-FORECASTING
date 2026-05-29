@@ -1,21 +1,21 @@
-// We separate the base URL and the key so we can cleanly target different endpoints
-const BASE_URL = "https://api.weatherapi.com/v1";
-const API_KEY = "eae20207b91a4142b90180155260102";
+// Pulling credentials securely from Vite's environment runtime
+const BASE_URL = import.meta.env.VITE_WEATHER_BASE_URL;
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
-// 1. LIVE AUTOCOMPLETE SUGGESTIONS ENDPOINT (For when you type a letter like 'K')
+// 1. LIVE AUTOCOMPLETE SUGGESTIONS ENDPOINT
 export const getCitySuggestions = async (query) => {
     if (!query || query.trim().length === 0) return [];
     try {
         const response = await fetch(`${BASE_URL}/search.json?key=${API_KEY}&q=${query}`);
         if (!response.ok) throw new Error("Autocomplete API failed");
-        return await response.json(); // Returns array of matches: [{name, region, country}, ...]
+        return await response.json(); 
     } catch (error) {
         console.error("Autocomplete search layer failure:", error);
         return [];
     }
 };
 
-// 2. DETAILED WEATHER DATA BY CITY (Upgraded to forecast.json for Recharts support)
+// 2. DETAILED WEATHER DATA BY CITY
 export const getWeatherDataForCity = async (city) => {
     try {
         const response = await fetch(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${city}&days=1&aqi=yes`);
@@ -27,7 +27,7 @@ export const getWeatherDataForCity = async (city) => {
     }
 };
 
-// 3. DETAILED WEATHER DATA BY COORDINATES (Upgraded to forecast.json for Geolocation chart support)
+// 3. DETAILED WEATHER DATA BY COORDINATES
 export const getWeatherDataForLocation = async (lat, lon) => {
     try {
         const response = await fetch(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${lat},${lon}&days=1&aqi=yes`);
