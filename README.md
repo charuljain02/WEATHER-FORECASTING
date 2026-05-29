@@ -1,77 +1,63 @@
-# 🌦️ Weather Forecasting App (React + Vite)
 
-A simple **Weather Forecasting App** built using **React**, **Context API**, and **WeatherAPI**.  
-Users can check **current weather conditions** by searching a city or using their **current location**.
+# 🌤️ Hyper-Fidelity Weather Forecasting Dashboard
 
----
+A modern, high-performance weather telemetry dashboard built with React, Vite, and Tailwind CSS v4. This application features live, debounced global autocomplete search indexing, client-side memory caching, dynamic geolocation tracking, and interactive microclimate metrics mapping using Recharts.
 
-## 📁 Folder Structure
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd40becf-cf5b-4d3f-8e31-0d1f90880076" />
 
-- `src/`
-  - `api/`
-    - `index.js` – Handles API calls
-  - `components/`
-    - `Button.jsx` – Reusable button component
-    - `Card.jsx` – Displays weather information
-    - `Input.jsx` – Input field for city search
-  - `context/`
-    - `Weather.jsx` – Weather context for global state
-  - `App.jsx` – Main App component
-  - `main.jsx` – Entry point
-  - `index.css` – App styling
+## 🚀 Core Features
 
----
+* **Live Global Autocomplete API:** Fetches real-time matching global city coordinates on every keystroke using a custom debounce window (300ms) to preserve network bandwidth and protect API rate limits.
+* **High-Fidelity UI/UX:** Built with a dark glassmorphic theme powered by Tailwind CSS v4, custom smooth scrollbar mechanics, and dynamic responsive layouts.
+* **Client-Side Suggestion Caching:** Optimizes application performance by saving previous location query results to local memory, achieving 0ms latency on repeated keystrokes.
+* **Complete Microclimate Metrics:** Displays UV Index alerts, Air Quality Data (AQI Index), humidity levels, barometric pressure, wind compass bearings, and visibility scales.
+* **Interactive 24-Hour Timeline:** Visualizes upcoming temperature vectors seamlessly using interactive area charts.
+* **Dynamic Search History:** Tracks and persists up to four recent lookups using browser `localStorage` integration.
 
-## 🔑 API Information
+## 🛠️ Technology Stack
 
-- **API Used:** WeatherAPI
-- **Notes:**
-  - API key is from the free tier
-  - Free API keys may **expire after a limited period**
-  - If the app stops showing data:
-    - Generate a new API key from WeatherAPI
-    - Update it in `src/api/index.js` or environment variables
+* **Frontend Library:** React (Functional Components + Hooks)
+* **Build Utility:** Vite (Fast Module Bundling)
+* **Styling Engine:** Tailwind CSS v4 (Modern CSS Directives)
+* **State Architecture:** React Context API (Unified Data Layers)
+* **Data Visualization:** Recharts (Vector Graphic Mapping)
+* **Icon Asset Matrix:** Lucide React
 
----
+## 📦 Installation & Setup
 
-## 📌 Important Note About City Names
+1. **Clone the repository:**
+   
 
-- The displayed city name comes directly from the **WeatherAPI response**
-- WeatherAPI may **normalize or auto-correct city names**
-  - Example: `Delhi` → `New Delhi`
-- This behavior is **expected** and not a bug
+git clone [https://github.com/charuljain02/WEATHER-FORECASTING](https://github.com/charuljain02/WEATHER-FORECASTING.git)
+```
+cd weather-forecasting
+npm install
 
----
+Create a .env file at the root of the project and add your WeatherAPI key:
+Code snippet
+VITE_WEATHER_API_KEY
 
-## ▶️ How to Run the Project Locally
-
-- **Install dependencies:**
-  ```bash
-  npm install
-Start development server:
 npm run dev
-Open in browser:
-http://localhost:5173
+
+```
 
 ---
+## 🚀 Core Features
 
-## 📸 Screenshots
-
-- **Weather App UI:**
-  - Displays **current weather conditions**
-  - Shows **temperature**, **weather icon**, and **location details**
-  - Screenshot:
-
-![Weather App Screenshot](./src/assets/image.png)
+* **Live Global Autocomplete API:** Fetches real-time matching global city coordinates on every keystroke using a custom debounce window (300ms) to preserve network bandwidth and protect API rate limits.
+* **High-Fidelity UI/UX:** Built with a dark glassmorphic theme powered by Tailwind CSS v4, custom smooth scrollbar mechanics, and dynamic responsive layouts.
+* **Client-Side Suggestion Caching:** Optimizes application performance by saving previous location query results to local memory, achieving 0ms latency on repeated keystrokes.
+* **Complete Microclimate Metrics:** Displays UV Index alerts, Air Quality Data (AQI Index), humidity levels, barometric pressure, wind compass bearings, and visibility scales.
+* **Interactive 24-Hour Timeline:** Visualizes upcoming temperature vectors seamlessly using interactive area charts.
+* **Dynamic Search History:** Tracks and persists up to four recent lookups using browser `localStorage` integration.
 
 ---
-## 📄 License
+## 🛠️ Technology Stack
 
-- **License Type:** Learning & Educational Purposes  
-- **Usage:**  
-  - This project is meant for **practice, learning, and portfolio use**  
-  - You are free to **view, clone, and learn** from this repository  
-  - **Not intended for commercial use**  
-- **Credits:**  
-  - Weather data powered by **WeatherAPI**  
-  - Built as a **learning project** to practice React, Context API, and API integration
+* **Frontend Library:** React (Functional Components + Hooks)
+* **Build Utility:** Vite (Fast Module Bundling)
+* **Styling Engine:** Tailwind CSS v4 (Modern CSS Directives)
+* **State Architecture:** React Context API (Unified Data Layers)
+* **Data Visualization:** Recharts (Vector Graphic Mapping)
+* **Icon Asset Matrix:** Lucide React
+  
